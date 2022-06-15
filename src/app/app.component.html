@@ -6,13 +6,10 @@
                     <p>Social Network</p>
                 </div>
                 <div class="col col-lg-4">
-                    <form #filterForm="ngForm" (ngSubmit)="filterData()">
-                        <input type="text" class="form-control" name="q" [(ngModel)]="filter.q">
-                        <div class="form-group col-12 mb-3">
-                            <div class="form-action">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </div>
+                    <form>
+                        <!-- <form #filterForm="ngForm" (ngSubmit)="filterData()"> -->
+                        <input type="text" class="form-control">
+                        <!-- <input type="text" class="form-control" name="q" [(ngModel)]="filter.q"> -->
                     </form>
                 </div>
                 <div class="col col-lg-1">
@@ -393,6 +390,31 @@
     </main>
 
     <footer>
-        res
+        <hr>
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                <div class="footer-icon-container mb-3">
+                    <img [src]="'assets/icon-twitter.png'" alt="">
+                    <img [src]="'assets/icon-linkedin.png'" alt="">
+                    <img [src]="'assets/icon-facebook.png'" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="list-footer">
+            <ul>
+                <li>About</li>
+                <li>For Business</li>
+                <li>Suggestion</li>
+                <li>Help & FAQs</li>
+                <li>Contacts</li>
+                <li>Pricing</li>
+            </ul>
+        </div>
+
+        <div class="copyright-footer">
+            <span>©Copyright 2013 companymame.inc</span>
+            <br>
+            <span>Privacy / Terms</span>
+        </div>
     </footer>
 </div>

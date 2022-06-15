@@ -12,14 +12,11 @@ export class DataService {
     return this.http.get('https://newsapi.org/v2/everything?q=bitcoin&apiKey=58b9b56bdac44e47a4ad819ffb06aea2');
   }
 
-  getFilterData(filter = null) {
-    if (filter) {
-      return this.http.get('https://newsapi.org/v2/everything?', { params: filter! })
-    } else {
-      return this.http.get(`https://newsapi.org/v2/everything?`);
-    }
-
-
-
-  }
+  // getFilterData(filter = null) {
+  //   if (filter) {
+  //     return this.http.get('https://newsapi.org/v2/everything?', { params: filter! })
+  //   } else {
+  //     return this.http.get(`https://newsapi.org/v2/everything?`);
+  //   }
+  // }
 }

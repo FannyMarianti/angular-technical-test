@@ -24,24 +24,24 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getData(this.filter);
+    this.getData();
   }
 
-  getData(filter: any) {
-    this.dataService.getFilterData(filter).subscribe((response: any) => {
+  getData() {
+    this.dataService.getData().subscribe((response: any) => {
       this.articles = response.articles;
     });
   }
 
-  filterData() {
-    this.router.navigate(
-      [],
-      {
-        queryParams: this.filter,
-        queryParamsHandling: 'merge', // remove to replace all query params by provided
-      });
+  // filterData() {
+  //   this.router.navigate(
+  //     [],
+  //     {
+  //       queryParams: this.filter,
+  //       queryParamsHandling: 'merge', // remove to replace all query params by provided
+  //     });
 
-    this.getData(this.filter);
-  }
+  //   this.getData(this.filter);
+  // }
 }
 
